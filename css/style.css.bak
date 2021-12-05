@@ -1,0 +1,174 @@
+
+
+
+body {
+    font-family: helvetica, arial, verdana, sans-serif;
+	margin:0 auto;
+	color: black;
+}
+
+
+#wrapper {
+width:960px;
+margin:0 auto;
+border-left:0 solid #ccc;
+border-right:0 solid #ccc;
+}
+
+#header {
+width:100%
+height:40px;
+margin:0;
+color:white;
+background:#306EFF;
+letter-spacing: 0.1em; 
+font-weight:bold; 
+font-size:22px;
+}
+
+#header A{
+color:white;
+}
+
+
+
+#nav {
+width:100%
+height:20px;
+color:#000033;
+background:#306EFF;
+}
+
+
+
+
+
+
+
+h1 {
+	color:black;
+}
+
+#calcform{
+	
+}
+
+#backbox{
+
+	}
+
+.box {
+	/* basics */
+	background-color:white;
+	color:black;
+    text-align: center;
+	border-style:solid;
+	border-color:#848484;
+	border-width:1px;
+	border-bottom:0;
+
+	/* rounded corners */
+    -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
+    padding: .8em .8em .8em;
+    width: 28em;
+}
+
+.box2 {
+	/* basics */
+	background-color:white;
+	color:black;
+    text-align: center;
+	border-style:solid;
+	border-color:#848484;
+	border-width:1px;
+
+	/* rounded corners */
+    -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
+    padding: .8em .8em .8em;
+    width: 28em;
+}
+
+#length {
+width:100%;
+border: 1px solid #848484;
+padding:5px;
+}	
+
+#interestRate {
+width:100%;
+border: 1px solid #848484;
+padding:5px;
+}	
+
+#loanAmount {
+width:100%;
+border: 1px solid #848484;
+padding:5px;
+}
+
+#LengthinYearsText{
+font-size:17px;
+}
+
+#InterestRateText{
+font-size:17px;
+}
+
+#LoanAmountText{
+font-size:17px;
+}
+
+#calculatortitle{
+font-size:25px;
+margin-bottom:8px;
+margin-top:15px;
+}
+
+A {
+	text-decoration:none;
+}
+
+
+
+#content {
+width:790px;
+float:left;
+padding:0px;
+padding-top:20px;
+background:white;
+}
+
+#adsidebar {
+width:160px;
+float:right;
+background:orange;
+margin-left:5px;
+}
+
+
+
+#leftsidebar {
+width:160px;
+float:left;
+}
+
+#leftsidebar a {
+text-decoration:none;
+}
+
+#leftsidebar li {
+list-style:none;
+}
+
+#footer {
+clear:both;
+width:100%;;
+height:195px;
+background:#306EFF;
+color:white;
+}
+
+#footer A{
+color:white;
+}
+
