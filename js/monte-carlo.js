@@ -1,4 +1,5 @@
  
+array to save scenarios. not completed yet
 const saved_scenarios = [];
 
 // does the simulation
@@ -119,10 +120,11 @@ function runSimulation(){
 	var endTime = performance.now();
 	console.log(`Took ${endTime - startTime} milliseconds to run`);
 
+	// the start of saving scenarios. not completed
 	let scenario_detail = {};
 	scenario_detail["successful"] = successful_simulations/simulations;
 	saved_scenarios.push(scenario_detail["successful"]);
-	alert(saved_scenarios);
+
 }
 
 // draws the line graphs by percentiles
