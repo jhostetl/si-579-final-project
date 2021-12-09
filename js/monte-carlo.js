@@ -1,5 +1,5 @@
  
-array to save scenarios. not completed yet
+//array to save scenarios. not completed yet
 const saved_scenarios = [];
 
 // does the simulation
@@ -12,12 +12,12 @@ function runSimulation(){
 	const simulations = 5000;
 	const results_array = [];
 	const current_age = +document.getElementById('currentAge').value.replace(/\,/g,'');
-	if ((currentAge) > 100 || currentAge < 1 ){
+	if ((current_age) > 100 || current_age < 1 ){
 		alert("Please enter a current age between 1 and 100");
 		return;
 	}
 	const retirement_age = +document.getElementById('retirementAge').value.replace(/\,/g,'');
-	if ((retirementAge) > 100 || retirementAge < 1 ){
+	if ((retirement_age) > 100 || retirement_age < 1 ){
 		alert("Please enter a retirement age between 1 and 100");
 		return;
 	}
