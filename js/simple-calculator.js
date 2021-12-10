@@ -78,7 +78,7 @@ function runSimple(){
 	}	
 
 	document.getElementById('summary1').textContent = "Retirement savings lasted until age " + bankrupt_age;
-	document.getElementById('summary2').textContent = "";
+	document.getElementById('summary2').textContent = ""; 
 
 	googleChartSimple(current_age, retirement_age, money_total_by_year);
 	$('html, body').animate({
