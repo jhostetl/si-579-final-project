@@ -1,6 +1,11 @@
  
-array to save scenarios. not completed yet
-const saved_scenarios = [];
+//array to save scenarios.
+let saved_scenarios = [];
+
+if (localStorage.length!==0){
+	saved_scenarios.push(JSON.parse(localStorage.getItem("All Saved Results")));
+	document.getElementById("saved_results").innerHTML = saved_scenarios.join(", "); 
+}
 
 // does the simulation
 function runSimulation(){
@@ -12,12 +17,12 @@ function runSimulation(){
 	const simulations = 5000;
 	const results_array = [];
 	const current_age = +document.getElementById('currentAge').value.replace(/\,/g,'');
-	if ((currentAge) > 100 || currentAge < 1 ){
+	if ((current_age) > 100 || current_age < 1 ){
 		alert("Please enter a current age between 1 and 100");
 		return;
 	}
 	const retirement_age = +document.getElementById('retirementAge').value.replace(/\,/g,'');
-	if ((retirementAge) > 100 || retirementAge < 1 ){
+	if ((retirement_age) > 100 || retirement_age < 1 ){
 		alert("Please enter a retirement age between 1 and 100");
 		return;
 	}
@@ -110,6 +115,8 @@ function runSimulation(){
 
 	document.getElementById('summary1').textContent = "Simulation was run " + simulations + " times with a median bankrupt age of " + median_bankrupt;
 	document.getElementById('summary2').textContent = Math.round(successful_simulations/simulations * 10000)/100 + "% of scenarios were successful past age 110";
+	document.getElementById('saveButtonDiv').style.visibility = "visible"
+	document.getElementById('savedResultsDiv').style.visibility = "visible"
 
 	googleChart(current_age, retirement_age, simulations, results_array);
 	$('html, body').animate({
@@ -120,11 +127,24 @@ function runSimulation(){
 	var endTime = performance.now();
 	console.log(`Took ${endTime - startTime} milliseconds to run`);
 
-	// the start of saving scenarios. not completed
+	// the start of saving scenarios
 	let scenario_detail = {};
 	scenario_detail["successful"] = successful_simulations/simulations;
 	saved_scenarios.push(scenario_detail["successful"]);
 
+	document.getElementById('saveButton').addEventListener("click", function saveResult (){
+		document.getElementById("saved_results").innerHTML = saved_scenarios.join(", "); 
+		localStorage.setItem("All Saved Results", JSON.stringify(saved_scenarios))
+	});
+
+	document.getElementById('clearButton').addEventListener("click", function clearResults (){
+		document.getElementById("saved_results").innerHTML = "(none)"; 
+		localStorage.clear();
+		saved_scenarios = [];
+	});
+	
+	console.log(results_array);
+	console.log(saved_scenarios);
 }
 
 // draws the line graphs by percentiles
@@ -174,6 +194,20 @@ function googleChart(current_age, retirement_age, simulations, results_array){
       	var linearChart = new google.visualization.LineChart(document.getElementById('linechart_material'));
        	linearChart.draw(data, linearOptions);
     }
+}
+
+function simpleSelect() {
+	document.getElementsByClassName("btn btn-simple")[0].style.backgroundColor="red";
+	document.getElementsByClassName("btn btn-simple")[0].style.color="white";
+	document.getElementsByClassName("btn btn-advanced")[0].style.backgroundColor="lightgray";
+	document.getElementsByClassName("btn btn-advanced")[0].style.color="black";
+}
+
+function advancedSelect() {
+	document.getElementsByClassName("btn btn-simple")[0].style.backgroundColor="lightgray";
+	document.getElementsByClassName("btn btn-simple")[0].style.color="black";
+	document.getElementsByClassName("btn btn-advanced")[0].style.backgroundColor="red";
+	document.getElementsByClassName("btn btn-advanced")[0].style.color="white";
 }
 
 

@@ -207,6 +207,10 @@
 						<input id="mobileButton" onclick="runSimulation()" type = "button" value = "Run Simulation" class = "btn btn-success"/>	
 			        </div>
 			    </div>
+				<div class="simple-advanced-btns">
+					<input id="desktopButton" onclick="simpleSelect()" type = "button" value = "Simple" class = "btn btn-simple" style = "width:30%; margin-top:15px;"/>	
+					<input id="desktopButton" onclick="advancedSelect()" type = "button" value = "Advanced" class = "btn btn-advanced" style = "width:30%; margin-top:15px;"/>	
+				</div>
 			</div>
 		</div>  
 		<div id = "simulationData">
@@ -220,7 +224,7 @@
 		<div  id = "percentageSummary" class = "jumbotron" style = "display:none; background:#424242; ">	
 			<div class="container">
 			    <div class="col-md-12" style = "background:white;border-radius:5px; padding:20px; padding-left:40px; padding-right:40px;">
-			    	<center>Percentage of Scenarios That Still Have Money at Each Age <span><a href="#" data-trigger="hover" data-toggle="popover" data-content="This shows the percentage of simulations that still have a positive amount of money at each age. 100% success means that all simulations had money at that age. 0% success means that all simulations went bankrupt by that age." class="question">?</a></span></center>
+			    	<div style="text-align:center">Percentage of Scenarios That Still Have Money at Each Age <span><a href="#" data-trigger="hover" data-toggle="popover" data-content="This shows the percentage of simulations that still have a positive amount of money at each age. 100% success means that all simulations had money at that age. 0% success means that all simulations went bankrupt by that age." class="question">?</a></span></div>
 			    	<div class = "table-responsive" style = "margin-top:8px;">
 						<table class = "table table-sm">																																
 						</table> 
@@ -236,6 +240,13 @@
 					<table id = "percentileChart" style = "font-size:13px; margin-top:0; padding:0; margin:0;" class = "table table-sm table-bordered table-hover"></table>	
 				</div>
 			</div>	
+			<div id="saveButtonDiv">
+				<button id= "clearButton" class="button2">Clear Results</button>
+				<button id= "saveButton" class="button">Save Result</button>
+			</div>
+			<div>
+                <div id= "savedResultsDiv">Saved results: <span id="saved_results">(none)</span></div>
+            </div>
 		</div>
 
 		<script type="text/javascript" src="js/other.js"></script>
