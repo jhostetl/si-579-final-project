@@ -1,6 +1,6 @@
  
-//array to save scenarios. not completed yet
-const saved_scenarios = [];
+//array to save scenarios.
+let saved_scenarios = [];
 
 if (localStorage.length!==0){
 	saved_scenarios.push(JSON.parse(localStorage.getItem("All Saved Results")));
@@ -127,7 +127,7 @@ function runSimulation(){
 	var endTime = performance.now();
 	console.log(`Took ${endTime - startTime} milliseconds to run`);
 
-	// the start of saving scenarios. not completed
+	// the start of saving scenarios
 	let scenario_detail = {};
 	scenario_detail["successful"] = successful_simulations/simulations;
 	saved_scenarios.push(scenario_detail["successful"]);
@@ -140,7 +140,7 @@ function runSimulation(){
 	document.getElementById('clearButton').addEventListener("click", function clearResults (){
 		document.getElementById("saved_results").innerHTML = "(none)"; 
 		localStorage.clear();
-//		saved_scenarios = [];
+		saved_scenarios = [];
 	});
 	
 	console.log(results_array);
