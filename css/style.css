@@ -149,13 +149,27 @@ input[type=range]:focus::-ms-fill-upper {
   background: #367ebd;
 }
 
-#saveButton {
+#saveButtonDiv {
   text-align: center;
   margin: 10px;
-  color: red;
+  visibility: hidden;
+}
+
+#savedResultsDiv {
+  margin: 10px;
+  visibility: hidden;
 }
 
 .button{
+  background-color: green;
+  border: none;
+  color: white;
+  padding: 15px 35px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.button2{
   background-color: red;
   border: none;
   color: white;
