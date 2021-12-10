@@ -149,6 +149,35 @@ input[type=range]:focus::-ms-fill-upper {
   background: #367ebd;
 }
 
+#saveButton {
+  text-align: center;
+  margin: 10px;
+  color: red;
+}
+
+.button{
+  background-color: red;
+  border: none;
+  color: white;
+  padding: 15px 35px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.simple-advanced-btns{
+  flex-direction: row;
+  text-align: center;
+}
+
+.btn-simple {
+  background-color: red;
+  color: white;
+}
+
+.btn-advanced {
+  background-color: lightgray;
+  color: black;
+}
 
 .question {
   cursor: pointer;

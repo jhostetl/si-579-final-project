@@ -207,6 +207,10 @@
 						<input id="mobileButton" onclick="runSimulation()" type = "button" value = "Run Simulation" class = "btn btn-success"/>	
 			        </div>
 			    </div>
+				<div class="simple-advanced-btns">
+					<input id="desktopButton" onclick="simpleSelect()" type = "button" value = "Simple" class = "btn btn-simple" style = "width:30%; margin-top:15px;"/>	
+					<input id="desktopButton" onclick="advancedSelect()" type = "button" value = "Advanced" class = "btn btn-advanced" style = "width:30%; margin-top:15px;"/>	
+				</div>
 			</div>
 		</div>  
 		<div id = "simulationData">
@@ -236,6 +240,7 @@
 					<table id = "percentileChart" style = "font-size:13px; margin-top:0; padding:0; margin:0;" class = "table table-sm table-bordered table-hover"></table>	
 				</div>
 			</div>	
+			<div id = "saveButton"></div>
 		</div>
 
 		<script type="text/javascript" src="js/other.js"></script>
