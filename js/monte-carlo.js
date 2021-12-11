@@ -6,6 +6,8 @@ if (localStorage.length!==0){
 	saved_scenarios.push(JSON.parse(localStorage.getItem("All Saved Results")));
 	document.getElementById("saved_results").innerHTML = saved_scenarios.join(", "); 
 }
+// sets beginning selection to simple
+document.getElementsByClassName("btn btn-simple")[0].style.backgroundColor="red";
 
 // does the simulation
 function runSimulation(){
@@ -138,13 +140,10 @@ function runSimulation(){
 	});
 
 	document.getElementById('clearButton').addEventListener("click", function clearResults (){
-		document.getElementById("saved_results").innerHTML = "(none)"; 
+		document.getElementById("saved_results").innerHTML = "(none saved)"; 
 		localStorage.clear();
 		saved_scenarios = [];
 	});
-	
-	console.log(results_array);
-	console.log(saved_scenarios);
 }
 
 // draws the line graphs by percentiles
@@ -197,6 +196,7 @@ function googleChart(current_age, retirement_age, simulations, results_array){
 }
 
 function simpleSelect() {
+	console.log("simple selected");
 	document.getElementsByClassName("btn btn-simple")[0].style.backgroundColor="red";
 	document.getElementsByClassName("btn btn-simple")[0].style.color="white";
 	document.getElementsByClassName("btn btn-advanced")[0].style.backgroundColor="lightgray";
@@ -204,10 +204,22 @@ function simpleSelect() {
 }
 
 function advancedSelect() {
+	console.log("advanced selected");
 	document.getElementsByClassName("btn btn-simple")[0].style.backgroundColor="lightgray";
 	document.getElementsByClassName("btn btn-simple")[0].style.color="black";
 	document.getElementsByClassName("btn btn-advanced")[0].style.backgroundColor="red";
 	document.getElementsByClassName("btn btn-advanced")[0].style.color="white";
+}
+
+function simpleAdvanced() {
+	if (document.getElementsByClassName("btn btn-simple")[0].style.backgroundColor=="red"){
+		runSimple();
+//		document.getElementById('saveButtonDiv').style.visibility = "hidden"
+//		document.getElementById('savedResultsDiv').style.visibility = "hidden"
+	}
+	else{
+		runSimulation();
+	}
 }
 
 
