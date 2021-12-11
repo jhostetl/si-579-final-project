@@ -180,7 +180,7 @@ input[type=range]:focus::-ms-fill-upper {
 
 .simple-advanced-btns{
   flex-direction: row;
-  text-align: center;
+
 }
 
 .btn-simple {

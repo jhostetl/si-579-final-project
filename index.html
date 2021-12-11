@@ -42,7 +42,7 @@
 							<div class = "col-md-6" style = "margin-top:10px;">
 								<label>Current Age</label>
 								<div class="input-group">						
-									<input value = "30" type="text" maxlength="3" class="form-control" id = "currentAge">
+									<input value = "36" type="text" maxlength="3" class="form-control" id = "currentAge">
 								</div>
 							</div>
 							<div class = "col-md-6" style = "margin-top:10px;">		
@@ -59,7 +59,7 @@
 							        <div class="input-group-prepend">
 							        	<div class="input-group-text">$</div>
 							        </div>												
-									<input value = "27,000" type="text" class="form-control" id = "currentSavings">
+									<input value = "52,000" type="text" class="form-control" id = "currentSavings">
 								</div>
 							</div>
 							<div class = "col-md-6" style = "margin-top:10px;">		
@@ -68,7 +68,7 @@
 									<div class="input-group-prepend">
 							        	<div class="input-group-text">$</div>
 							        </div>	
-									<input value = "4,800" type="text" class="form-control" id = "annualDeposits">
+									<input value = "6,800" type="text" class="form-control" id = "annualDeposits">
 								</div>
 							</div>
 						</div>
@@ -79,7 +79,7 @@
 							        <div class="input-group-prepend">
 							        	<div class="input-group-text">$</div>
 							        </div>												
-									<input value = "32,000" type="text" class="form-control" id = "annualWithdrawals">
+									<input value = "37,000" type="text" class="form-control" id = "annualWithdrawals">
 								</div>
 							</div>
 							<div class = "col-md-6" style = "margin-top:10px;">		
@@ -106,7 +106,13 @@
 									</div>
 								</div>
 							</div>	
-						</div>																	
+						</div>	
+						
+						<div class="simple-advanced-btns">	
+							<label style = "margin-top:15px;">Choose Calculation Type:</label>
+							<input id="desktopButton" onclick="simpleSelect()" type = "button" value = "Simple" class = "btn btn-simple" />							
+							<input id="desktopButton" onclick="advancedSelect()" type = "button" value = "Advanced" class = "btn btn-advanced" />	
+						</div>																						
 						<input id="desktopButton" onclick="simpleAdvanced();" type = "button" value = "Run Simulation" class = "btn btn-success" style = "width:100%; margin-top:15px;"/>			
 			        </div>
 			        <div class="col-md-6"  style = "padding:25px; padding-top:15px; ">	
@@ -207,10 +213,6 @@
 						<input id="mobileButton" onclick="runSimulation()" type = "button" value = "Run Simulation" class = "btn btn-success"/>	
 			        </div>
 			    </div>
-				<div class="simple-advanced-btns">
-					<input id="desktopButton" onclick="simpleSelect()" type = "button" value = "Simple" class = "btn btn-simple" style = "width:30%; margin-top:15px;"/>	
-					<input id="desktopButton" onclick="advancedSelect()" type = "button" value = "Advanced" class = "btn btn-advanced" style = "width:30%; margin-top:15px;"/>	
-				</div>
 			</div>
 		</div>  
 		<div id = "simulationData">
