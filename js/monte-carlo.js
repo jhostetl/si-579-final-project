@@ -214,8 +214,8 @@ function advancedSelect() {
 function simpleAdvanced() {
 	if (document.getElementsByClassName("btn btn-simple")[0].style.backgroundColor=="red"){
 		runSimple();
-//		document.getElementById('saveButtonDiv').style.visibility = "hidden"
-//		document.getElementById('savedResultsDiv').style.visibility = "hidden"
+		document.getElementById('saveButtonDiv').style.visibility = "hidden"
+		document.getElementById('savedResultsDiv').style.visibility = "hidden"
 	}
 	else{
 		runSimulation();
